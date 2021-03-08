@@ -1,7 +1,5 @@
 # cs203s2021-activity4
 
-[![Actions Status](https://github.com/allegheny-computer-science-203-s2021/activity4/workflows/linting/badge.svg)](https://github.com/allegheny-computer-science-203-s2021/activity4/actions)
-
 ## DUE: by 
 
 ## Introduction
@@ -16,3 +14,5 @@ This assignment invites a developer to explore the use of badges and to develop 
 
 ## Tasks
 
+1. Add linting build badge.
+2. Create a GitHub project board.
