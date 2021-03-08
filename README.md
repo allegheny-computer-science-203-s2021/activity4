@@ -10,9 +10,10 @@ contains the starter files for a class activity four. The GitHub Actions CI buil
 this repository will fail, as evidenced by a red
 &#x2717; appearing in the commit logs.
 
-This assignment invites a developer to explore the use of badges and to develop GitHub project board.
+This assignment invites a developer to explore the use of GitHub project boards and GitHub Actions and badges.
 
 ## Tasks
 
-1. Add linting build badge.
-2. Create a GitHub project board.
+1. Create at least three GitHub issues in each others' repositories.
+2. In your own repository, create GitHub project board with at least three columns and with some automation. Populate the board and practice moving cards across columns. Make sure all boxes under "Welcome to GitHub Projects" are checked.
+3. Explore [GitHub Actions](https://docs.github.com/en/actions) and add build [badge](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge) to your Markdown README file.
