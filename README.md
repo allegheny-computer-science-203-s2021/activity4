@@ -1,6 +1,6 @@
 # cs203s2021-activity4
 
-## DUE: by 
+## DUE: by Thursday, March 11 
 
 ## Introduction
 
