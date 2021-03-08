@@ -1,3 +1,5 @@
+# ref: https://github.com/actions/setup-python
+
 name: build
 
 on:
@@ -5,29 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-  grade:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.x']
     steps:
-    - run: |
-        echo "/home/runner/.pyenv/bin" >> $GITHUB_PATH
-        echo "/home/runner/.local/bin" >> $GITHUB_PATH
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: '0'
-    - name: Set up grading environment
-      run: |
-        curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-        pyenv install 3.6.3
-        echo "eval '$(pyenv init -)'" >> ~/.bashrc
-        eval "$(pyenv virtualenv-init -)" >> ~/.bashrc
-        source ~/.bashrc
-        pyenv global 3.6.3
-        pip install --upgrade pip
-        pip install pipenv
-    - name: Check practical
-      run: |
-        gradle grade
-      if: always()
-      env:
-       PIPENV_VENV_IN_PROJECT: 1
-       PIPENV_IGNORE_VIRTUALENVS: 1
+      - uses: actions/checkout@v2
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python src/hello.py
